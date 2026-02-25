@@ -438,6 +438,28 @@ ul {
   transform: scale(1.05);
 }
 
+.map-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.map-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.map-link:hover img {
+  transform: scale(1.02);
+}
+
+.map-link:hover .map-overlay {
+  opacity: 1 !important;
+}
+
 .gallery-label {
   position: absolute;
   bottom: 0;
