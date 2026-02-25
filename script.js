@@ -177,6 +177,40 @@ function nextCarouselImage() {
     updateCarouselView();
 }
 
+/**
+ * Scrolls a CSS scroll-snap container by one item width
+ * @param {string} containerId - The ID of the carousel container
+ * @param {number} direction - 1 for right (next), -1 for left (prev)
+ */
+function scrollCarousel(containerId, direction) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    // Calculate the width of one child (assuming all children have same width)
+    const scrollAmount = container.clientWidth;
+    container.scrollBy({
+        left: scrollAmount * direction,
+        behavior: 'smooth'
+    });
+}
+
+function resetForm() {
+    const contactForm = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    contactForm.style.display = 'block';
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'none';
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = document.documentElement.classList.contains('en-active') ?
+            '<span>Send request</span>' : '<span>Enviar solicitud</span>';
+    }
+}
+
 // Bind SVG clicks and Swipe
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -241,6 +275,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial render for Living Room
     showRoomImages('living');
+
+    // Form Submission Handling
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+
+            // Loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = htmlTag.classList.contains('en-active') ? 'Sending...' : 'Enviando...';
+
+            const formData = new FormData(contactForm);
+
+            // Real API call to FormSubmit.co via AJAX
+            fetch("https://formsubmit.co/ajax/soy@santigil.com", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success === "true" || data.success === true) {
+                        contactForm.style.display = 'none';
+                        document.getElementById('form-success').style.display = 'block';
+                        document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        throw new Error("FormSubmit response not successful");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                    contactForm.style.display = 'none';
+                    document.getElementById('form-error').style.display = 'block';
+                    document.getElementById('form-error').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+        });
+    }
 
     // Check local storage or browser pref for lang (optional)
     const userLang = navigator.language || navigator.userLanguage;

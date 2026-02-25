@@ -366,7 +366,7 @@
                         <td>
                             <span data-lang="es">
                                 • Ventanal de arriba a abajo completo en el salón<br>
-                                • Persianas motorizadas en salón y habitaciones<br>
+                                • Persianas motorizadas en salón<br>
                                 • Toldos motorizados en el salón (recién cambiados)<br>
                                 • Focos empotrados en toda la casa<br>
                                 • Panel japonés a medida en el salón<br>
@@ -377,7 +377,7 @@
                             </span>
                             <span data-lang="en">
                                 • Complete floor-to-ceiling window in the living room<br>
-                                • Motorized blinds in living room and bedrooms<br>
+                                • Motorized blinds in living room<br>
                                 • Motorized awnings in living room (newly replaced)<br>
                                 • Recessed spotlights throughout the house<br>
                                 • Custom-made Japanese panels in the living room<br>
@@ -415,7 +415,7 @@
                 <div>
                     <h4 data-lang="es">Bajo comercial silencioso.</h4>
                     <h4 data-lang="en">Quiet ground-floor business.</h4>
-                    <p data-lang="es">El local inferior es un almacén de electrodomésticos (sin cafeterías ni terrazas
+                    <p data-lang="es">El local inferior es un almacén (sin cafeterías ni terrazas
                         molestas bajo tu casa).</p>
                     <p data-lang="en">The commercial space below is an appliance warehouse (no cafes, bars, or terraces
                         under your home).</p>
@@ -431,7 +431,7 @@
             <h2 class="section-title" data-lang="en">Location & Life on Foot</h2>
 
             <div style="margin-bottom: 32px;">
-                <a href="https://maps.app.goo.gl/Gr5EPUw5TVP2YR8D7" target="_blank" class="map-link">
+                <a href="https://maps.app.goo.gl/hbGoXKNRDntpfqcz5" target="_blank" class="map-link">
                     <img src="https://placehold.co/1200x500/f3f0e6/cba86a?text=Rúa+San+Froilán+1,+Ourense"
                         alt="Map Location: Rúa San Froilán 1, Ourense"
                         style="width: 100%; display: block; border-radius: 12px; object-fit: cover; aspect-ratio: 16/6;">
@@ -509,7 +509,7 @@
 
                     <!-- CSS Scroll Snap Carousel -->
                     <div style="position: relative; width: 100%; height: 220px;">
-                        <div class="project-carousel"
+                        <div class="project-carousel" id="carousel-park"
                             style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
                             <img src="https://imgfz.com/i/yQbcKAR.jpeg" alt="Parque Cañedo con piso señalado"
                                 style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
@@ -519,8 +519,14 @@
                             <img src="https://imgfz.com/i/TeAViLj.jpeg" alt="Parque Cañedo entorno"
                                 style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
                         </div>
+                        <!-- Navigation Arrows -->
+                        <button onclick="scrollCarousel('carousel-park', -1)" class="carousel-arrow left-arrow"
+                            style="color: white; padding: 10px; font-size: 1.2rem;">❮</button>
+                        <button onclick="scrollCarousel('carousel-park', 1)" class="carousel-arrow right-arrow"
+                            style="color: white; padding: 10px; font-size: 1.2rem;">❯</button>
+
                         <div
-                            style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; pointer-events: none;">
+                            style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; pointer-events: none; z-index: 10;">
                             ⟷ <span data-lang="es">Desliza</span><span data-lang="en">Swipe</span>
                         </div>
                     </div>
@@ -546,15 +552,21 @@
 
                     <!-- CSS Scroll Snap Carousel -->
                     <div style="position: relative; width: 100%; height: 220px;">
-                        <div class="project-carousel"
+                        <div class="project-carousel" id="carousel-station"
                             style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
                             <img src="https://imgfz.com/i/41GA8EC.jpeg" alt="Obras Estación intermodal 1"
                                 style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
                             <img src="https://imgfz.com/i/JR2LCNm.jpeg" alt="Obras Estación intermodal 2"
                                 style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
                         </div>
+                        <!-- Navigation Arrows -->
+                        <button onclick="scrollCarousel('carousel-station', -1)" class="carousel-arrow left-arrow"
+                            style="color: white; padding: 10px; font-size: 1.2rem;">❮</button>
+                        <button onclick="scrollCarousel('carousel-station', 1)" class="carousel-arrow right-arrow"
+                            style="color: white; padding: 10px; font-size: 1.2rem;">❯</button>
+
                         <div
-                            style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; pointer-events: none;">
+                            style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; pointer-events: none; z-index: 10;">
                             ⟷ <span data-lang="es">Desliza</span><span data-lang="en">Swipe</span>
                         </div>
                     </div>
@@ -603,7 +615,7 @@
 
                     <div
                         style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 16px; aspect-ratio: 16 / 9; max-height: 450px;">
-                        <div class="project-carousel"
+                        <div class="project-carousel" id="carousel-actual"
                             style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
                             <img src="https://i.postimg.cc/7h946Nm2/actual1.jpg" alt="Obra vista 1"
                                 style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
@@ -612,6 +624,12 @@
                             <img src="https://i.postimg.cc/cChWHcXw/actual3.jpg" alt="Obra vista 3"
                                 style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
                         </div>
+                        <!-- Navigation Arrows -->
+                        <button onclick="scrollCarousel('carousel-actual', -1)" class="carousel-arrow left-arrow"
+                            style="color: white; padding: 15px; font-size: 1.5rem;">❮</button>
+                        <button onclick="scrollCarousel('carousel-actual', 1)" class="carousel-arrow right-arrow"
+                            style="color: white; padding: 15px; font-size: 1.5rem;">❯</button>
+
                         <div
                             style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.6); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; z-index: 10;">
                             ⟷ <span data-lang="es">Desliza para ver más</span><span data-lang="en">Swipe to see
@@ -760,7 +778,7 @@
                         target="_blank">
                         💬 WhatsApp
                     </a>
-                    <a href="mailto:sanfroilan@example.com" class="btn btn-outline"
+                    <a href="mailto:soy@santigil.com" class="btn btn-outline"
                         style="border-color: var(--primary); color: var(--primary); width: 100%; max-width: 250px;">
                         ✉️ Email
                     </a>
@@ -773,37 +791,44 @@
                     <span data-lang="en">Or fill out this short form:</span>
                 </h3>
 
-                <form onsubmit="event.preventDefault(); alert('Formulario enviado (simulación)');">
+                <form id="contact-form">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Nueva solicitud: San Froilán 1">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
                     <div class="grid-2" style="gap: 20px;">
                         <div class="form-group">
                             <label data-lang="es">Nombre</label>
                             <label data-lang="en">Name</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label data-lang="es">Teléfono</label>
                             <label data-lang="en">Phone</label>
-                            <input type="tel" class="form-control" required>
+                            <input type="tel" name="phone" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label data-lang="es">Email</label>
                         <label data-lang="en">Email</label>
-                        <input type="email" class="form-control" required>
+                        <input type="email" name="email" class="form-control" required>
                     </div>
 
                     <div class="form-group">
                         <label data-lang="es">Disponibilidad preferida para visita</label>
                         <label data-lang="en">Preferred time for viewing</label>
-                        <input type="text" class="form-control" placeholder="Ej: Tardes, fines de semana...">
+                        <input type="text" name="availability" class="form-control"
+                            placeholder="Ej: Tardes, fines de semana...">
                     </div>
 
                     <div class="form-group" style="margin-top: 24px;">
                         <label class="checkbox-label">
-                            <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
-                            <span data-lang="es">Tengo pre-aprobación financiera / Podría necesitar financiación.</span>
-                            <span data-lang="en">I have pre-approval / I might need financing.</span>
+                            <input type="checkbox" name="is_agency"
+                                style="width: 18px; height: 18px; accent-color: var(--primary);">
+                            <span data-lang="es">Soy una inmobiliaria.</span>
+                            <span data-lang="en">I am a real estate agency.</span>
                         </label>
                     </div>
 
@@ -813,6 +838,41 @@
                         <span data-lang="en">Send request</span>
                     </button>
                 </form>
+
+                <div id="form-success" class="form-feedback"
+                    style="display: none; text-align: center; padding: 40px 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">✅</div>
+                    <h3 data-lang="es"
+                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">¡Solicitud
+                        enviada!</h3>
+                    <h3 data-lang="en"
+                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">Request
+                        sent!</h3>
+                    <p data-lang="es" style="color: var(--text-muted); font-size: 1.1rem;">Gracias por tu interés. Nos
+                        pondremos en contacto contigo lo antes posible.</p>
+                    <p data-lang="en" style="color: var(--text-muted); font-size: 1.1rem;">Thank you for your interest.
+                        We will get in touch with you as soon as possible.</p>
+                </div>
+
+                <div id="form-error" class="form-feedback"
+                    style="display: none; text-align: center; padding: 40px 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">❌</div>
+                    <h3 data-lang="es"
+                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">Algo ha
+                        salido mal</h3>
+                    <h3 data-lang="en"
+                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">Something
+                        went wrong</h3>
+                    <p data-lang="es" style="color: var(--text-muted); font-size: 1.1rem;">No hemos podido enviar tu
+                        solicitud. Por favor, inténtalo de nuevo o contacta por WhatsApp.</p>
+                    <p data-lang="en" style="color: var(--text-muted); font-size: 1.1rem;">We couldn't send your
+                        request. Please try again or contact via WhatsApp.</p>
+                    <button onclick="resetForm()" class="btn btn-outline"
+                        style="margin-top: 20px; color: var(--primary); border-color: var(--primary);">
+                        <span data-lang="es">Reintentar</span>
+                        <span data-lang="en">Retry</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
