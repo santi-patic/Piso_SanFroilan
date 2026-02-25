@@ -18,5 +18,5 @@ jobs:
           port: 22
           password: ${{ secrets.FTP_PASSWORD }}
           local_path: "./"
-          remote_path: "./htdocs/SantiGil/"
+          remote_path: "/SantiPiso"
           sftp_only: true
