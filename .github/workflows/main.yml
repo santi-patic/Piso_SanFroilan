@@ -1,26 +1,23 @@
-name: 🚀 Despliegue a IONOS
+name: 🚀 Despliegue SFTP a IONOS
 on:
   push:
     branches:
       - main
 
 jobs:
-  web-deploy:
-    name: 🚚 Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Obtener código actual
-      uses: actions/checkout@v3
+      - name: 🚚 Obtener código de GitHub
+        uses: actions/checkout@v3
 
-    - name: 🚀 Subir archivos vía SFTP (Cifrado seguro)
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        port: 22
-        protocol: sftp
-        # Nota sobre el directorio: 
-        # En tu captura de IONOS pone que el usuario entra directo a /SantiGil
-        # Si tu web debe ir en /SantiPiso, asegúrate de que esa carpeta existe dentro.
-        server-dir: ./
+      - name: 🚀 Subir archivos vía SFTP (Puerto 22)
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 22
+          local_path: './*' # Sube todo lo que hay en el repo
+          remote_path: '/SantiGil' # <--- OJO AQUÍ (Lee abajo)
+          sftp_only: true
