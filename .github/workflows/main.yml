@@ -12,11 +12,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 🚀 Subir archivos vía SFTP
-        uses: n-p-as/sftp-deploy-action@v1.2.4
+        uses: pressidium/sftp-deploy@v1
         with:
           host: ${{ secrets.FTP_SERVER }}
-          port: 22
-          username: ${{ secrets.FTP_USERNAME }}
+          user: ${{ secrets.FTP_USERNAME }} # Nota: esta herramienta usa 'user' en vez de 'username'
           password: ${{ secrets.FTP_PASSWORD }}
-          local_path: './' # Sube todo lo que hay en GitHub
-          remote_path: './SantiPiso' # Lo suelta directamente en la carpeta del usuario (/SantiGil)
+          port: 22
+          local_path: './'   # Lo que hay en GitHub
+          remote_path: './SantiPiso'  # Lo suelta en la carpeta del usuario (/SantiGil)
