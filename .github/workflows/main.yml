@@ -7,16 +7,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Obtener código
+      - name: 🚚 Checkout
         uses: actions/checkout@v4
 
-      - name: 📤 Subir por SFTP
-        uses: appleboy/scp-action@v0.1.7 # <--- Esta es la herramienta correcta
+      - name: 📤 Deploy por SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_SERVER }}
           port: 22
-          source: "." # Coge todos los archivos de tu GitHub
-          target: "SantiPiso" # <--- Apunta a la carpeta que ya existe DENTRO de SantiGil
-          strip_components: 0
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_path: "./"
+          remote_path: "/kunden/homepages/20/d450938841/htdocs/SantiGil/"
+          sftp_only: true
