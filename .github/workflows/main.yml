@@ -11,13 +11,12 @@ jobs:
       - name: 🚚 Obtener código de GitHub
         uses: actions/checkout@v3
 
-      - name: 🚀 Subir archivos vía SFTP (Puerto 22)
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: 🚀 Subir archivos vía SFTP
+        uses: n-p-as/sftp-deploy-action@v1.2.4
         with:
-          username: ${{ secrets.FTP_USERNAME }}
-          server: ${{ secrets.FTP_SERVER }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          host: ${{ secrets.FTP_SERVER }}
           port: 22
-          local_path: './*' # Sube todo lo que hay en el repo
-          remote_path: '/SantiGil' # <--- OJO AQUÍ (Lee abajo)
-          sftp_only: true
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_path: './' # Sube todo lo que hay en GitHub
+          remote_path: './SantiPiso' # Lo suelta directamente en la carpeta del usuario (/SantiGil)
