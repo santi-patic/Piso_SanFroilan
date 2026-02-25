@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Froilán 1 - Park View Apartment</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Simplified icons placeholders using emojis in code for speed/reliability -->
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">San Froilán 1 · Park View Apartment</div>
+            <div class="nav-links">
+                <a href="#fotos" data-lang="es">Fotos</a>
+                <a href="#fotos" data-lang="en">Photos</a>
+                <a href="#plano" data-lang="es">Plano</a>
+                <a href="#plano" data-lang="en">Floor Plan</a>
+                <a href="#ubicacion" data-lang="es">Ubicación</a>
+                <a href="#ubicacion" data-lang="en">Location</a>
+                <a href="#proyectos" data-lang="es">Proyectos</a>
+                <a href="#proyectos" data-lang="en">Projects</a>
+                <a href="#contacto" data-lang="es">Contacto</a>
+                <a href="#contacto" data-lang="en">Contact</a>
+            </div>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLang('es')">ES</button>
+                <button class="lang-btn" onclick="setLang('en')">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/34661215327" class="floating-whatsapp" target="_blank">
+        <span style="font-size: 1.2rem;">💬</span>
+        <span data-lang="es">WhatsApp · Pedir visita</span>
+        <span data-lang="en">WhatsApp · Book a viewing</span>
+    </a>
+
+    <!-- A) HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-lang="es">Parque y luz de mañana<br>+ garaje y bodega</h1>
+            <h1 data-lang="en">Park views and morning sun<br>+ garage and storage</h1>
+
+            <p class="subtitle" data-lang="es">Rúa San Froilán 1 (A Ponte). Todo al parque, nada a la carretera. 3 hab ·
+                2 baños · 96 m² construidos (83 útiles) · terraza</p>
+            <p class="subtitle" data-lang="en">San Froilán 1 St (A Ponte). All windows face the park. 3 beds · 2 baths ·
+                96 sqm built (83 usable) · terrace</p>
+
+            <div class="hero-actions">
+                <a href="#contacto" class="btn btn-primary">
+                    <span data-lang="es">Pedir visita por WhatsApp</span>
+                    <span data-lang="en">Book viewing via WhatsApp</span>
+                </a>
+                <a href="#fotos" class="btn btn-outline">
+                    <span data-lang="es">Ver fotos</span>
+                    <span data-lang="en">View photos</span>
+                </a>
+            </div>
+
+            <div class="hero-chips">
+                <div class="chip">☀️ <span data-lang="es">Orientación Este (sol de mañana)</span><span
+                        data-lang="en">East facing (morning sun)</span></div>
+                <div class="chip">🌳 <span data-lang="es">Vistas al Parque de Cañedo</span><span data-lang="en">Cañedo
+                        Park views</span></div>
+                <div class="chip">🚗 <span data-lang="es">Garaje + bodega (4 m²)</span><span data-lang="en">Garage +
+                        storage (4 sqm)</span></div>
+                <div class="chip">🛗 <span data-lang="es">2 ascensores (uno baja al garaje)</span><span data-lang="en">2
+                        elevators (one to garage)</span></div>
+                <div class="chip">🚫 <span data-lang="es">Sin pisos turísticos (acuerdo comunidad)</span><span
+                        data-lang="en">No tourist rentals allowed</span></div>
+                <div class="chip">📍 <span data-lang="es">Fuera de ZBE Ourense Centro</span><span data-lang="en">Outside
+                        Central LEZ</span></div>
+                <div class="chip">🚪 <span data-lang="es">Armarios empotrados + vestidor</span><span
+                        data-lang="en">Built-in wardrobes + walk-in</span></div>
+                <div class="chip">🌡️ <span data-lang="es">Calefacción individual</span><span data-lang="en">Individual
+                        heating</span></div>
+                <div class="chip">✅ <span data-lang="es">Sin cargas</span><span data-lang="en">Debt-free property</span>
+                </div>
+                <div class="chip">☀️ <span data-lang="es">Toldos del salón nuevos</span><span data-lang="en">New living
+                        room awnings</span></div>
+                <div class="chip">📄 <span data-lang="es">Certificado energético en tramitación</span><span
+                        data-lang="en">Energy certificate in process</span></div>
+                <div class="chip">🤝 <span data-lang="es">Vecindario tranquilo y agradable</span><span
+                        data-lang="en">Quiet and pleasant neighborhood</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B) TOP 6 HIGHLIGHTS -->
+    <section class="section section-bg-light">
+        <div class="container">
+            <div class="grid-3">
+                <!-- Highlight 1 -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">🌳</div>
+                    <h3 data-lang="es">Vistas al parque</h3>
+                    <h3 data-lang="en">Park-facing view</h3>
+                    <p data-lang="es">Ventanas directas al futuro Parque de Cañedo, ofreciendo un entorno verde y
+                        abierto.</p>
+                    <p data-lang="en">Direct windows to the future Cañedo Park, offering an open, green environment.</p>
+                </div>
+                <!-- Highlight 2 -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">🤫</div>
+                    <h3 data-lang="es">Tranquilidad absoluta</h3>
+                    <h3 data-lang="en">Absolute quiet</h3>
+                    <p data-lang="es">Ninguna ventana da a la carretera. Olvídate del ruido del tráfico.</p>
+                    <p data-lang="en">No road-facing windows. Forget about traffic noise completely.</p>
+                </div>
+                <!-- Highlight 3 -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">☀️</div>
+                    <h3 data-lang="es">Sol de mañana</h3>
+                    <h3 data-lang="en">Morning sun</h3>
+                    <p data-lang="es">Orientación Este. Despierta con luz natural directa inundando el salón.</p>
+                    <p data-lang="en">East-facing. Wake up with direct natural light flooding the living area.</p>
+                </div>
+                <!-- Highlight 4 -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">🚗</div>
+                    <h3 data-lang="es">Garaje y bodega</h3>
+                    <h3 data-lang="en">Garage & storage</h3>
+                    <p data-lang="es">Aparcamiento fácil con plaza cómoda y trastero adicional de 4m² incluidos.</p>
+                    <p data-lang="en">Easy parking with a comfortable spot and an additional 4sqm storage room.</p>
+                </div>
+                <!-- Highlight 5 -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">🛗</div>
+                    <h3 data-lang="es">Doble ascensor</h3>
+                    <h3 data-lang="en">Double elevator</h3>
+                    <p data-lang="es">Edificio equipado con dos ascensores, uno de ellos con bajada directa al garaje.
+                    </p>
+                    <p data-lang="en">Building equipped with two elevators, one connecting directly to the basement.</p>
+                </div>
+                <!-- Highlight 6 -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏠</div>
+                    <h3 data-lang="es">Comunidad residencial</h3>
+                    <h3 data-lang="en">Residential peace</h3>
+                    <p data-lang="es">Normativa firme contra alquileres turísticos para garantizar el descanso.</p>
+                    <p data-lang="en">Strict community policy against tourist rentals to guarantee peaceful living.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- C) GALLERY (Removed, merged with interactive floor plan below) -->
+
+    <!-- D) FLOOR PLAN -->
+    <section id="plano" class="section section-bg-light" style="padding-top: 60px;">
+        <div class="container">
+            <!-- Center Aligned Title Matches Reference Image -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 class="section-title" data-lang="es"
+                    style="margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 500;">
+                    Galería Interactiva</h2>
+                <h2 class="section-title" data-lang="en"
+                    style="margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 500;">
+                    Interactive Gallery</h2>
+                <p data-lang="es"
+                    style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Selecciona un
+                    modo de vista y haz clic en el plano para explorar cada rincón del apartamento.</p>
+                <p data-lang="en"
+                    style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Select a view
+                    mode and click on the floor plan to explore every corner of the apartment.</p>
+            </div>
+
+            <!-- Re-inserted Gallery Controls (Real / Empty) -->
+            <div class="gallery-controls" style="margin-bottom: 40px;">
+                <div class="gallery-tabs"
+                    style="background: transparent; border-bottom: 1px solid var(--border-light); border-radius: 0; padding: 0; gap: 40px; display: inline-flex;">
+                    <button class="gallery-tab active" onclick="switchGallery('real')"
+                        style="border-radius: 0; padding: 10px 0; border-bottom: 2px solid var(--primary); background: transparent; box-shadow: none;">
+                        <span data-lang="es" style="font-size: 1.1rem;">✓ Real</span>
+                        <span data-lang="en" style="font-size: 1.1rem;">✓ Real</span>
+                    </button>
+                    <button class="gallery-tab" onclick="switchGallery('ai')"
+                        style="border-radius: 0; padding: 10px 0; border-bottom: 2px solid transparent; background: transparent; box-shadow: none;">
+                        <span data-lang="es" style="font-size: 1.1rem;">✨ Vacío</span>
+                        <span data-lang="en" style="font-size: 1.1rem;">✨ Empty</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="floorplan-container interactive-mode">
+
+                <!-- 1. Interactive Photo Carousel (Moved to the LEFT) -->
+                <div class="carousel-side-panel"
+                    style="background: var(--bg-white); padding: 32px; border-radius: 12px; display: flex; flex-direction: column; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+
+                    <div style="margin-bottom: 20px;">
+                        <h3 id="carousel-title"
+                            style="font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--text-main); margin: 0 0 8px 0; font-weight: 600;">
+                            Salón</h3>
+                        <p id="carousel-desc" style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Vista
+                            frontal del salón, espacioso y con mucha luz.</p>
+                    </div>
+
+                    <!-- Carousel Container -->
+                    <div id="carousel-viewport"
+                        style="position: relative; flex-grow: 1; min-height: 250px; display: flex; align-items: center; justify-content: center; background: var(--bg-light); border-radius: 8px; overflow: hidden;">
+
+                        <img id="carousel-image" src="https://i.postimg.cc/G3MJ3zfP/salon1.jpg" alt="Room Photo"
+                            style="max-width: 100%; max-height: 350px; object-fit: contain; border-radius: 8px; transition: opacity 0.2s ease;">
+
+                        <!-- Custom Arrows to match style -->
+                        <button onclick="prevCarouselImage()" class="carousel-arrow left-arrow">❮</button>
+                        <button onclick="nextCarouselImage()" class="carousel-arrow right-arrow">❯</button>
+
+                        <div id="carousel-counter"
+                            style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.5); color: white; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; z-index: 10;">
+                            1 / 3</div>
+                    </div>
+                </div>
+
+                <!-- 2. SVG Interactive Map (Moved to the RIGHT) -->
+                <div class="floorplan-visuals"
+                    style="position: relative; overflow: hidden; border-radius: 12px; background: var(--bg-white); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+                    <div style="position: relative; width: 100%; max-width: 600px;">
+                        <img src="https://i.postimg.cc/bNcYHxG5/plano.jpg" alt="Plano San Froilán 1"
+                            style="width: 100%; display: block; border-radius: 8px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05));">
+
+                        <!-- ViewBox mapped roughly to the aspect ratio of the plan -->
+                        <svg viewBox="0 0 100 100" preserveAspectRatio="none"
+                            style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: 10;"
+                            id="floorplan-svg">
+
+                            <!-- Salón -->
+                            <polygon points="64,12 87,12 87,41 64,41" class="floor-area active" data-room="living"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Terraza -->
+                            <polygon points="89,12 96,12 96,22 89,22" class="floor-area" data-room="terrace"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Cocina -->
+                            <polygon points="51,12 61,12 61,47 51,47" class="floor-area" data-room="kitchen"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Baño 1 (pasillo) -->
+                            <polygon points="41,63 48,63 48,81 41,81" class="floor-area" data-room="bath1"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Pasillo -->
+                            <polygon points="33,51 68,51 68,60 33,60" class="floor-area" data-room="hall"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Habitacion 2 -->
+                            <polygon points="27,18 37,18 37,48 27,48" class="floor-area" data-room="bed2"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Habitacion 3 -->
+                            <polygon points="39,18 49,18 49,48 39,48" class="floor-area" data-room="bed3"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Dormitorio Principal -->
+                            <polygon points="12,18 25,18 25,54 12,54" class="floor-area" data-room="bed1"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Baño principal -->
+                            <polygon points="32,63 39,63 39,81 32,81" class="floor-area" data-room="bath2"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                            <!-- Vestidor -->
+                            <polygon points="21,63 30,63 30,81 21,81" class="floor-area" data-room="vestidor"
+                                fill="transparent" stroke="transparent" stroke-width="0.3" />
+                        </svg>
+
+                        <!-- Extra buttons for Garage and Storage as per reference image -->
+                        <div class="floorplan-extra-links"
+                            style="position: absolute; right: 20px; bottom: 20px; z-index: 15; display: flex; flex-direction: column; gap: 10px;">
+                            <button class="floor-button" data-room="garage">
+                                <span data-lang="es">VER GARAJE</span>
+                                <span data-lang="en">SEE GARAGE</span>
+                            </button>
+                            <button class="floor-button" data-room="storage">
+                                <span data-lang="es">VER TRASTERO</span>
+                                <span data-lang="en">SEE STORAGE</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 16px; text-align: center; color: var(--text-main); font-size: 0.95rem; font-weight: 600;">
+                        <span data-lang="es">Haz clic en una estancia para verla en detalle</span>
+                        <span data-lang="en">Click on a room to view it in detail</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- E) PROPERTY DETAILS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-lang="es">La vivienda</h2>
+            <h2 class="section-title" data-lang="en">Property details</h2>
+
+            <table class="details-table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span data-lang="es">Habitaciones y Baños</span>
+                            <span data-lang="en">Rooms & Bathrooms</span>
+                        </td>
+                        <td>
+                            <span data-lang="es">3 habitaciones, 2 baños completos</span>
+                            <span data-lang="en">3 bedrooms, 2 full bathrooms</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span data-lang="es">Superficie</span>
+                            <span data-lang="en">Area</span>
+                        </td>
+                        <td>
+                            <span data-lang="es">96 m² construidos / 83 m² útiles</span>
+                            <span data-lang="en">96 sqm built / 83 sqm usable</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span data-lang="es">Anejos</span>
+                            <span data-lang="en">Annexes</span>
+                        </td>
+                        <td>
+                            <span data-lang="es">Pequeña terraza, garaje y bodega (4 m²)</span>
+                            <span data-lang="en">Small terrace, garage and storage (4 sqm)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span data-lang="es">Antigüedad y Estado</span>
+                            <span data-lang="en">Age & Status</span>
+                        </td>
+                        <td>
+                            <span data-lang="es">16 años. Sin cargas (libre de deudas). Planta 2ª con altura equivalente
+                                superior (bajo de gran altura).</span>
+                            <span data-lang="en">16 years old. Debt-free property. 2nd floor but elevated due to tall
+                                ground floor.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span data-lang="es">Climatización</span>
+                            <span data-lang="en">Climate Control</span>
+                        </td>
+                        <td>
+                            <span data-lang="es">Calefacción individual. Buen aislamiento térmico.</span>
+                            <span data-lang="en">Individual heating. Good thermal insulation.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span data-lang="es">Acabados e Instalaciones</span>
+                            <span data-lang="en">Finishes & Amenities</span>
+                        </td>
+                        <td>
+                            <span data-lang="es">
+                                • Armarios empotrados en todas las habitaciones + vestidor<br>
+                                • Cocina con encimera y frontal de Silestone, electrodomésticos funcionando<br>
+                                • Toldos del salón recién cambiados<br>
+                                • 2 ascensores (uno conecta con garaje)<br>
+                                • Parquet en habitaciones/salón; gres en baños/cocina
+                            </span>
+                            <span data-lang="en">
+                                • Built-in wardrobes in all bedrooms + walk-in closet<br>
+                                • Kitchen with Silestone countertop + backsplash, working appliances<br>
+                                • Newly replaced living room awnings<br>
+                                • 2 elevators (one connects to garage)<br>
+                                • Hardwood floors in living/bedrooms; tile in wet areas
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- F) PEACE & QUIET -->
+    <section class="section section-bg-light">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title" data-lang="es">Tranquilidad (de la de verdad)</h2>
+            <h2 class="section-title" data-lang="en">Peace & Quiet (Real)</h2>
+
+            <div class="peace-card">
+                <i>🛡️</i>
+                <div>
+                    <h4 data-lang="es">Comunidad con acuerdo unánime: no se permiten pisos turísticos.</h4>
+                    <h4 data-lang="en">Community agreement: tourist rentals are strictly forbidden.</h4>
+                    <p data-lang="es">Garantía total de no tener ruidos ni tránsito de turistas de Airbnb en el
+                        edificio.</p>
+                    <p data-lang="en">Total guarantee of no noise or Airbnb tourist traffic in the building.</p>
+                </div>
+            </div>
+
+            <div class="peace-card">
+                <i>🏢</i>
+                <div>
+                    <h4 data-lang="es">Bajo comercial silencioso.</h4>
+                    <h4 data-lang="en">Quiet ground-floor business.</h4>
+                    <p data-lang="es">El local inferior es un almacén de electrodomésticos (sin cafeterías ni terrazas
+                        molestas bajo tu casa).</p>
+                    <p data-lang="en">The commercial space below is an appliance warehouse (no cafes, bars, or terraces
+                        under your home).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- G) LOCATION & LIFE ON FOOT -->
+    <section id="ubicacion" class="section">
+        <div class="container">
+            <h2 class="section-title" data-lang="es">Ubicación y vida a pie</h2>
+            <h2 class="section-title" data-lang="en">Location & Life on Foot</h2>
+
+            <div style="margin-bottom: 32px;">
+                <img src="https://placehold.co/1200x400/dddddd/aaaaaa?text=Map+Location:+R%C3%BAa+San+Froil%C3%A1n+1,+Ourense"
+                    alt="Map" style="width: 100%; border-radius: 12px; object-fit: cover;">
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h3 style="margin-bottom: 20px; font-weight: 700;">
+                        <span data-lang="es">Vida a pie (aprox.)</span>
+                        <span data-lang="en">Distance on foot (approx.)</span>
+                    </h3>
+                    <ul style="display: flex; flex-direction: column; gap: 12px; color: var(--text-muted);">
+                        <li>🏙️ <span data-lang="es">Parque San Lázaro (centro): 18 min</span><span data-lang="en">San
+                                Lázaro Park (center): 18 min walk</span></li>
+                        <li>🛍️ <span data-lang="es">Centro Comercial Pontevella: 11 min</span><span
+                                data-lang="en">Pontevella Shopping Center: 11 min walk</span></li>
+                        <li>🏞️ <span data-lang="es">Ponte Romana (Paseo del Miño): 6 min</span><span
+                                data-lang="en">Roman Bridge (Miño river walk): 6 min walk</span></li>
+                        <li>♨️ <span data-lang="es">Termas da Chavasqueira: 11 min</span><span data-lang="en">A
+                                Chavasqueira Thermal Baths: 11 min walk</span></li>
+                        <li>🎒 <span data-lang="es">Colexio Salesianos: 7 min (otros colegios a menos de 5
+                                min)</span><span data-lang="en">Salesianos School: 7 min walk (others under 5
+                                min)</span></li>
+                        <li>🛒 <span data-lang="es">Supermercados cercanos: Gadis, Mercadona, Eroski</span><span
+                                data-lang="en">Nearby supermarkets: Gadis, Mercadona, Eroski</span></li>
+                        <li>🚲 <span data-lang="es">Inicio del carril bici que atraviesa la ciudad</span><span
+                                data-lang="en">Start of the bike lane crossing the city</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 20px; font-weight: 700;">
+                        <span data-lang="es">Movilidad y ZBE</span>
+                        <span data-lang="en">Mobility & ZBE</span>
+                    </h3>
+                    <div
+                        style="background: var(--bg-light); padding: 24px; border-radius: 12px; border: 1px solid var(--border-light);">
+                        <p style="font-weight: 600; color: var(--primary); margin-bottom: 8px;">🚙
+                            <span data-lang="es">Fuera de la ZBE Ourense Centro</span>
+                            <span data-lang="en">Outside Central LEZ (Low Emission Zone)</span>
+                        </p>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">
+                            <span data-lang="es">(recomendable verificar el perímetro oficial con el ayuntamiento).
+                                Evita las restricciones de tráfico del centro histórico.</span>
+                            <span data-lang="en">(recommended to verify official boundaries with city hall). Avoid
+                                traffic restrictions of the historic center.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- H) PROJECTS -->
+    <section id="proyectos" class="section section-bg-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span data-lang="es">Hoy: vistas al parque · Mañana: entorno renovado</span>
+                <span data-lang="en">Today: park views · Tomorrow: renewed environment</span>
+            </h2>
+
+            <div class="grid-3">
+                <!-- Parque Cañedo Project -->
+                <div class="highlight-card project-card"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+
+                    <!-- CSS Scroll Snap Carousel -->
+                    <div style="position: relative; width: 100%; height: 220px;">
+                        <div class="project-carousel"
+                            style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
+                            <img src="https://imgfz.com/i/yQbcKAR.jpeg" alt="Parque Cañedo con piso señalado"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                            <img src="https://estaticos-cdn.prensaiberica.es/clip/aeb6fe5d-fe98-40be-9919-a77d01a1873a_alta-libre-aspect-ratio_default_0.jpg"
+                                alt="Render Parque Cañedo desde edificio"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center; object-position: center bottom;">
+                            <img src="https://imgfz.com/i/TeAViLj.jpeg" alt="Parque Cañedo entorno"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; pointer-events: none;">
+                            ⟷ <span data-lang="es">Desliza</span><span data-lang="en">Swipe</span>
+                        </div>
+                    </div>
+
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <h3 data-lang="es" style="margin: 0;">Parque de Cañedo</h3>
+                            <h3 data-lang="en" style="margin: 0;">Cañedo Park</h3>
+                            <span
+                                style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">2027</span>
+                        </div>
+                        <p data-lang="es" style="margin-top: auto;">Gran parque en ejecución con zonas verdes y
+                            equipamientos directamente frente a tu ventana.</p>
+                        <p data-lang="en" style="margin-top: auto;">Large park currently under construction with green
+                            areas directly in front of your window.</p>
+                    </div>
+                </div>
+
+                <!-- Intermodal Project -->
+                <div class="highlight-card project-card"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+
+                    <!-- CSS Scroll Snap Carousel -->
+                    <div style="position: relative; width: 100%; height: 220px;">
+                        <div class="project-carousel"
+                            style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
+                            <img src="https://imgfz.com/i/41GA8EC.jpeg" alt="Obras Estación intermodal 1"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                            <img src="https://imgfz.com/i/JR2LCNm.jpeg" alt="Obras Estación intermodal 2"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; pointer-events: none;">
+                            ⟷ <span data-lang="es">Desliza</span><span data-lang="en">Swipe</span>
+                        </div>
+                    </div>
+
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <h3 data-lang="es" style="margin: 0;">Estación Intermodal</h3>
+                            <h3 data-lang="en" style="margin: 0;">Intermodal Station</h3>
+                            <span
+                                style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">2029</span>
+                        </div>
+                        <p data-lang="es" style="margin-top: auto;">Transformación total del barrio con mejoras urbanas
+                            y ferroviarias en marcha a un paso de casa.</p>
+                        <p data-lang="en" style="margin-top: auto;">Total neighborhood transformation with urban and
+                            railway improvements underway just steps from home.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <img src="https://estaticos-cdn.prensaiberica.es/clip/5e6b37a1-9256-4036-8a0d-d988b28dd5de_16-9-aspect-ratio_default_0.jpg"
+                        alt="Senda Verde"
+                        style="width:100%; height: 220px; object-fit: cover; object-position: center bottom;">
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 data-lang="es">Senda verde / Carril bici</h3>
+                        <h3 data-lang="en">Greenway / Bike lane</h3>
+                        <p data-lang="es">Conexión ciclable y peatonal que atraviesa la ciudad con acceso inmediato.</p>
+                        <p data-lang="en">Cycling and pedestrian connection crossing the city with immediate access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- I) TRANSPARENCY & J) FURNISHED -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <!-- Transparency: Current view -->
+                <div>
+                    <h3 style="font-weight: 700; margin-bottom: 24px;">
+                        <span data-lang="es">Vista actual (obras en curso)</span>
+                        <span data-lang="en">Current view (construction ongoing)</span>
+                    </h3>
+
+                    <div
+                        style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 16px; aspect-ratio: 16 / 9; max-height: 450px;">
+                        <div class="project-carousel"
+                            style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
+                            <img src="https://i.postimg.cc/7h946Nm2/actual1.jpg" alt="Obra vista 1"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                            <img src="https://i.postimg.cc/Wz8V37Xr/actual2.jpg" alt="Obra vista 2"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                            <img src="https://i.postimg.cc/cChWHcXw/actual3.jpg" alt="Obra vista 3"
+                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.6); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; z-index: 10;">
+                            ⟷ <span data-lang="es">Desliza para ver más</span><span data-lang="en">Swipe to see
+                                more</span> (24/2/2026)
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: var(--bg-light); padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary);">
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">
+                            <span data-lang="es">Incluimos imágenes reales para total transparencia. Se estima que las
+                                obras finalicen en un año (febrero 2027). Una vez finalizado, la vivienda quedará en
+                                primera línea del parque (ver render "Mañana").</span>
+                            <span data-lang="en">We include real photos for total transparency. Construction is expected
+                                to finish in one year (February 2027). Once finished, the property will be right on the
+                                park front line.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Furnished Option / Accordion -->
+                <div>
+                    <h3 style="font-weight: 700; margin-bottom: 24px;">
+                        <span data-lang="es">¿Se entrega amueblado?</span>
+                        <span data-lang="en">Is it furnished?</span>
+                    </h3>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                            <span data-lang="es">Opciones de mobiliario</span>
+                            <span data-lang="en">Furniture options</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p style="margin-top: 12px; font-weight: 600;">
+                                <span data-lang="es">Posibilidad de entregarse amueblado a convenir (ideal para entrar a
+                                    vivir desde el primer día).</span>
+                                <span data-lang="en">Possibility of being delivered furnished by arrangement (ideal to
+                                    move in from day one).</span>
+                            </p>
+                            <p style="margin-top: 8px; font-size: 0.9rem; font-style: italic;">
+                                <span data-lang="es">Nota: Inventario detallado a acordar durante la
+                                    visita/negociación.</span>
+                                <span data-lang="en">Note: Detailed inventory to be agreed upon during
+                                    visit/negotiation.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- K) FAQ -->
+    <section class="section section-bg-light">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title" data-lang="es">Preguntas Frecuentes</h2>
+            <h2 class="section-title" data-lang="en">Frequent Questions</h2>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <span data-lang="es">¿Por qué se vende?</span>
+                    <span data-lang="en">Why is it for sale?</span>
+                </button>
+                <div class="accordion-content">
+                    <p style="margin-top: 12px;">
+                        <span data-lang="es">Los propietarios actuales son una familia de cinco que necesita una
+                            vivienda más grande. Les encanta el piso y la zona, pero se les ha quedado pequeño.</span>
+                        <span data-lang="en">The current owners are a family of five who need a larger home. They love
+                            the apartment and the area, but have outgrown it.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <span data-lang="es">¿Da a la carretera?</span>
+                    <span data-lang="en">Does it face a road?</span>
+                </button>
+                <div class="accordion-content">
+                    <p style="margin-top: 12px;">
+                        <span data-lang="es">No. Ninguna de las ventanas da a la calle por donde circulan coches. Todas
+                            las ventanas exteriores miran hacia el futuro parque o a patio.</span>
+                        <span data-lang="en">No. None of the windows face a road with traffic. All exterior windows look
+                            towards the future park or interior patio.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <span data-lang="es">¿Pisos turísticos?</span>
+                    <span data-lang="en">Tourist apartments?</span>
+                </button>
+                <div class="accordion-content">
+                    <p style="margin-top: 12px;">
+                        <span data-lang="es">No. La comunidad de vecinos ha aprobado una normativa estricta que prohíbe
+                            el alquiler turístico, garantizando la tranquilidad del edificio.</span>
+                        <span data-lang="en">No. The community has approved a strict policy forbidding tourist rentals,
+                            ensuring a peaceful residential building.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <span data-lang="es">¿Altura?</span>
+                    <span data-lang="en">Floor level?</span>
+                </button>
+                <div class="accordion-content">
+                    <p style="margin-top: 12px;">
+                        <span data-lang="es">Es registralmente una 2ª planta, pero tiene una altura equivalente
+                            ligeramente superior gracias a que el bajo comercial es de gran altura.</span>
+                        <span data-lang="en">It's a 2nd floor, but feels slightly higher due to the ground floor having
+                            very high ceilings.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <span data-lang="es">¿Zona de Bajas Emisiones (ZBE)?</span>
+                    <span data-lang="en">Low Emission Zone (LEZ)?</span>
+                </button>
+                <div class="accordion-content">
+                    <p style="margin-top: 12px;">
+                        <span data-lang="es">El piso (A Ponte) queda fuera del anillo central de la ZBE de Ourense, por
+                            lo que goza de mayor libertad de movilidad. Aconsejamos verificar siempre el perímetro
+                            oficial.</span>
+                        <span data-lang="en">The apartment (A Ponte district) lies outside the central Ourense LEZ ring,
+                            allowing greater mobility. We recommend checking the official boundary maps.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- L) FINAL CTA -->
+    <section id="contacto" class="section">
+        <div class="container" style="max-width: 800px;">
+            <div class="contact-form">
+                <h2 class="section-title" style="margin-bottom: 32px;" data-lang="es">Agenda tu visita</h2>
+                <h2 class="section-title" style="margin-bottom: 32px;" data-lang="en">Schedule your visit</h2>
+
+                <div style="display: flex; gap: 16px; margin-bottom: 40px; justify-content: center;">
+                    <a href="https://wa.me/34000000000" class="btn btn-primary" style="width: 100%; max-width: 250px;"
+                        target="_blank">
+                        💬 WhatsApp
+                    </a>
+                    <a href="mailto:sanfroilan@example.com" class="btn btn-outline"
+                        style="border-color: var(--primary); color: var(--primary); width: 100%; max-width: 250px;">
+                        ✉️ Email
+                    </a>
+                </div>
+
+                <hr style="border: none; border-top: 1px solid var(--border-light); margin-bottom: 32px;">
+
+                <h3 style="margin-bottom: 24px; text-align: center; font-weight: 600;">
+                    <span data-lang="es">O rellena este breve formulario:</span>
+                    <span data-lang="en">Or fill out this short form:</span>
+                </h3>
+
+                <form onsubmit="event.preventDefault(); alert('Formulario enviado (simulación)');">
+                    <div class="grid-2" style="gap: 20px;">
+                        <div class="form-group">
+                            <label data-lang="es">Nombre</label>
+                            <label data-lang="en">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-lang="es">Teléfono</label>
+                            <label data-lang="en">Phone</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-lang="es">Email</label>
+                        <label data-lang="en">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-lang="es">Disponibilidad preferida para visita</label>
+                        <label data-lang="en">Preferred time for viewing</label>
+                        <input type="text" class="form-control" placeholder="Ej: Tardes, fines de semana...">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 24px;">
+                        <label class="checkbox-label">
+                            <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                            <span data-lang="es">Tengo pre-aprobación financiera / Podría necesitar financiación.</span>
+                            <span data-lang="en">I have pre-approval / I might need financing.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; margin-top: 16px; font-size: 1.125rem;">
+                        <span data-lang="es">Enviar solicitud</span>
+                        <span data-lang="en">Send request</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p data-lang="es">Las imágenes "Vacío (IA)" son simulaciones conceptuales; no representan la realidad. Las
+                imágenes de proyectos son renderizados informativos. Las distancias mostradas son aproximaciones. Se
+                recomienda verificar los límites exactos de la ZBE con ordenanzas locales.</p>
+            <p data-lang="en">"Empty (AI)" images are conceptual simulations; they do not represent reality. Project
+                images are informational renders. Distances shown are approximations. It is recommended to verify exact
+                LEZ boundaries with local ordinances.</p>
+
+            <div style="margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                <a href="#"
+                    style="background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: white;">
+                    <span data-lang="es">🔗 Compartir la web</span>
+                    <span data-lang="en">🔗 Share website</span>
+                </a>
+                <p style="margin: 0; font-size: 0.9rem;">
+                    Email: <a href="mailto:soy@santigil.com"
+                        style="color: white; text-decoration: underline;">soy@santigil.com</a>
+                </p>
+            </div>
+
+            <p style="margin-top: 32px; font-size: 0.8rem; opacity: 0.5;">
+                &copy; 2026 San Froilán 1 - Park View Apartment.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
