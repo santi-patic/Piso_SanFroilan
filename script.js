@@ -23,26 +23,26 @@ function setLang(lang) {
 
 // Gallery Data
 const galleryData = [
-    { id: 'living1', es: 'Salón', en: 'Living room', real: 'https://i.postimg.cc/ncb35TfP/salon1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=living_ai_01.jpg' },
-    { id: 'living2', es: 'Salón', en: 'Living room', real: 'https://i.postimg.cc/28Q0fvCw/salon2.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=living_ai_02.jpg' },
-    { id: 'living3', es: 'Salón', en: 'Living room', real: 'https://i.postimg.cc/c4RFNYdF/salon3.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=living_ai_03.jpg' },
-    { id: 'kitchen1', es: 'Cocina', en: 'Kitchen', real: 'https://i.postimg.cc/SQzZD33R/cocina1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=kitchen_ai_01.jpg' },
-    { id: 'kitchen2', es: 'Cocina', en: 'Kitchen', real: 'https://i.postimg.cc/QNW60wwF/cocina2.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=kitchen_ai_02.jpg' },
-    { id: 'bed1_1', es: 'Dormitorio principal', en: 'Main bedroom', real: 'https://i.postimg.cc/Vsb7DppM/habitacion1-2.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bedroom1_ai_01.jpg' },
-    { id: 'bed1_2', es: 'Dormitorio principal', en: 'Main bedroom', real: 'https://i.postimg.cc/zXZxMpYv/habitacion1-3.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bedroom1_ai_02.jpg' },
-    { id: 'vestidor1', es: 'Vestidor', en: 'Walk-in closet', real: 'https://i.postimg.cc/pXfst8PS/vestidor1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=walkin_ai_01.jpg' },
-    { id: 'vestidor2', es: 'Vestidor', en: 'Walk-in closet', real: 'https://i.postimg.cc/yYmLz972/vestidor2.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=walkin_ai_02.jpg' },
-    { id: 'bed2', es: 'Dormitorio 2', en: 'Bedroom 2', real: 'https://i.postimg.cc/vHF0jXwf/habitacion2-1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bedroom2_ai_01.jpg' },
-    { id: 'bed3', es: 'Dormitorio 3', en: 'Bedroom 3', real: 'https://i.postimg.cc/4NkWMwRv/habitacion3-1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bedroom3_ai_01.jpg' },
-    { id: 'bath1_1', es: 'Baño 1', en: 'Bathroom 1', real: 'https://i.postimg.cc/1X6JXVwM/banho1-1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bathroom_ai_01.jpg' },
-    { id: 'bath1_2', es: 'Baño 1', en: 'Bathroom 1', real: 'https://i.postimg.cc/fW0HBppZ/banho1-2.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bathroom_ai_02.jpg' },
-    { id: 'bath2_1', es: 'Baño principal', en: 'Main bathroom', real: 'https://i.postimg.cc/HW7SBRRc/banho2-1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bathroom_ai_03.jpg' },
-    { id: 'bath2_2', es: 'Baño principal', en: 'Main bathroom', real: 'https://i.postimg.cc/bY263WWN/banho2-2.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=bathroom_ai_04.jpg' },
-    { id: 'hall1', es: 'Pasillo', en: 'Corridor', real: 'https://i.postimg.cc/wT8wPFY0/pasillo1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=hall_ai_01.jpg' },
-    { id: 'hall2', es: 'Pasillo', en: 'Corridor', real: 'https://i.postimg.cc/fTn8F5Q2/pasillo2.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=hall_ai_02.jpg' },
-    { id: 'terrace', es: 'Balcón / Terraza', en: 'Balcony / Terrace', real: 'https://i.postimg.cc/BbDMbPHj/balcon1.jpg', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=terrace_ai_01.jpg' },
-    { id: 'garage1', es: 'Garaje', en: 'Garage', real: 'https://placehold.co/800x600/1e293b/ffffff?text=Plaza+de+Garaje', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=garage_ai.jpg' },
-    { id: 'storage1', es: 'Trastero', en: 'Storage', real: 'https://placehold.co/800x600/334155/ffffff?text=Bodega/Trastero', ai: 'https://placehold.co/800x600/f0f9ff/0369a1?text=storage_ai.jpg' }
+    { id: 'living1', es: 'Salón', en: 'Living room', real: 'https://i.postimg.cc/ncb35TfP/salon1.jpg' },
+    { id: 'living2', es: 'Salón', en: 'Living room', real: 'https://i.postimg.cc/28Q0fvCw/salon2.jpg' },
+    { id: 'living3', es: 'Salón', en: 'Living room', real: 'https://i.postimg.cc/c4RFNYdF/salon3.jpg' },
+    { id: 'kitchen1', es: 'Cocina', en: 'Kitchen', real: 'https://i.postimg.cc/SQzZD33R/cocina1.jpg' },
+    { id: 'kitchen2', es: 'Cocina', en: 'Kitchen', real: 'https://i.postimg.cc/QNW60wwF/cocina2.jpg' },
+    { id: 'bed1_1', es: 'Dormitorio principal', en: 'Main bedroom', real: 'https://i.postimg.cc/Vsb7DppM/habitacion1-2.jpg' },
+    { id: 'bed1_2', es: 'Dormitorio principal', en: 'Main bedroom', real: 'https://i.postimg.cc/zXZxMpYv/habitacion1-3.jpg' },
+    { id: 'vestidor1', es: 'Vestidor', en: 'Walk-in closet', real: 'https://i.postimg.cc/pXfst8PS/vestidor1.jpg' },
+    { id: 'vestidor2', es: 'Vestidor', en: 'Walk-in closet', real: 'https://i.postimg.cc/yYmLz972/vestidor2.jpg' },
+    { id: 'bed2', es: 'Dormitorio 2', en: 'Bedroom 2', real: 'https://i.postimg.cc/vHF0jXwf/habitacion2-1.jpg' },
+    { id: 'bed3', es: 'Dormitorio 3', en: 'Bedroom 3', real: 'https://i.postimg.cc/4NkWMwRv/habitacion3-1.jpg' },
+    { id: 'bath1_1', es: 'Baño 1', en: 'Bathroom 1', real: 'https://i.postimg.cc/1X6JXVwM/banho1-1.jpg' },
+    { id: 'bath1_2', es: 'Baño 1', en: 'Bathroom 1', real: 'https://i.postimg.cc/fW0HBppZ/banho1-2.jpg' },
+    { id: 'bath2_1', es: 'Baño principal', en: 'Main bathroom', real: 'https://i.postimg.cc/HW7SBRRc/banho2-1.jpg' },
+    { id: 'bath2_2', es: 'Baño principal', en: 'Main bathroom', real: 'https://i.postimg.cc/bY263WWN/banho2-2.jpg' },
+    { id: 'hall1', es: 'Pasillo', en: 'Corridor', real: 'https://i.postimg.cc/wT8wPFY0/pasillo1.jpg' },
+    { id: 'hall2', es: 'Pasillo', en: 'Corridor', real: 'https://i.postimg.cc/fTn8F5Q2/pasillo2.jpg' },
+    { id: 'terrace', es: 'Balcón / Terraza', en: 'Balcony / Terrace', real: 'https://i.postimg.cc/BbDMbPHj/balcon1.jpg' },
+    { id: 'garage1', es: 'Garaje', en: 'Garage', real: 'https://placehold.co/800x600/1e293b/ffffff?text=Plaza+de+Garaje' },
+    { id: 'storage1', es: 'Trastero', en: 'Storage', real: 'https://placehold.co/800x600/334155/ffffff?text=Bodega/Trastero' }
 ];
 
 // Interactive Floorplan Logic
@@ -142,8 +142,7 @@ function updateCarouselView() {
     imgEl.style.opacity = 0;
 
     setTimeout(() => {
-        const isAi = document.querySelector('.gallery-tab[onclick*="ai"]').classList.contains('active');
-        imgEl.src = isAi ? currentImages[currentIndex].ai : currentImages[currentIndex].real;
+        imgEl.src = currentImages[currentIndex].real;
         counterEl.innerText = `${currentIndex + 1} / ${currentImages.length}`;
         imgEl.style.opacity = 1;
     }, 200);

@@ -175,29 +175,14 @@
                     style="margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 500;">
                     Interactive Gallery</h2>
                 <p data-lang="es"
-                    style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Selecciona un
-                    modo de vista y haz clic en el plano para explorar cada rincón del apartamento.</p>
+                    style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Haz clic en
+                    el plano para explorar cada rincón de la vivienda.</p>
                 <p data-lang="en"
-                    style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Select a view
-                    mode and click on the floor plan to explore every corner of the apartment.</p>
+                    style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Click on the
+                    floor plan to explore every corner of the apartment.</p>
             </div>
 
-            <!-- Re-inserted Gallery Controls (Real / Empty) -->
-            <div class="gallery-controls" style="margin-bottom: 40px;">
-                <div class="gallery-tabs"
-                    style="background: transparent; border-bottom: 1px solid var(--border-light); border-radius: 0; padding: 0; gap: 40px; display: inline-flex;">
-                    <button class="gallery-tab active" onclick="switchGallery('real')"
-                        style="border-radius: 0; padding: 10px 0; border-bottom: 2px solid var(--primary); background: transparent; box-shadow: none;">
-                        <span data-lang="es" style="font-size: 1.1rem;">✓ Real</span>
-                        <span data-lang="en" style="font-size: 1.1rem;">✓ Real</span>
-                    </button>
-                    <button class="gallery-tab" onclick="switchGallery('ai')"
-                        style="border-radius: 0; padding: 10px 0; border-bottom: 2px solid transparent; background: transparent; box-shadow: none;">
-                        <span data-lang="es" style="font-size: 1.1rem;">✨ Vacío</span>
-                        <span data-lang="en" style="font-size: 1.1rem;">✨ Empty</span>
-                    </button>
-                </div>
-            </div>
+
 
             <div class="floorplan-container interactive-mode">
 
@@ -851,12 +836,25 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p data-lang="es">Las imágenes "Vacío (IA)" son simulaciones conceptuales; no representan la realidad. Las
-                imágenes de proyectos son renderizados informativos. Las distancias mostradas son aproximaciones. Se
+            <p data-lang="es">Las imágenes de proyectos son renderizados informativos. Las distancias mostradas son
+                aproximaciones. Se
                 recomienda verificar los límites exactos de la ZBE con ordenanzas locales.</p>
-            <p data-lang="en">"Empty (AI)" images are conceptual simulations; they do not represent reality. Project
-                images are informational renders. Distances shown are approximations. It is recommended to verify exact
+            <p data-lang="en">Project images are informational renders. Distances shown are approximations. It is
+                recommended to verify exact
                 LEZ boundaries with local ordinances.</p>
+
+            <!-- Custom message for Santigil.com -->
+            <div
+                style="margin-top: 30px; padding: 20px; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; display: inline-block;">
+                <p style="margin: 0; font-size: 1rem; color: white;">
+                    <span data-lang="es">Si quieres tener una web como esta para vender tu piso, escríbeme a <a
+                            href="mailto:soy@santigil.com"
+                            style="color: var(--primary); font-weight: 600;">soy@santigil.com</a></span>
+                    <span data-lang="en">If you'd like a website like this to sell your apartment, write to me at <a
+                            href="mailto:soy@santigil.com"
+                            style="color: var(--primary); font-weight: 600;">soy@santigil.com</a></span>
+                </p>
+            </div>
 
             <div style="margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
                 <a href="#"
@@ -864,10 +862,6 @@
                     <span data-lang="es">🔗 Compartir la web</span>
                     <span data-lang="en">🔗 Share website</span>
                 </a>
-                <p style="margin: 0; font-size: 0.9rem;">
-                    Email: <a href="mailto:soy@santigil.com"
-                        style="color: white; text-decoration: underline;">soy@santigil.com</a>
-                </p>
             </div>
 
             <p style="margin-top: 32px; font-size: 0.8rem; opacity: 0.5;">

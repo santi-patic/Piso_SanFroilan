@@ -407,11 +407,7 @@ ul {
   box-shadow: var(--shadow-sm);
 }
 
-.gallery-disclaimer {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
+
 
 .gallery-grid {
   display: grid;
