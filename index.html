@@ -791,87 +791,8 @@
                     <span data-lang="en">Or fill out this short form:</span>
                 </h3>
 
-                <form id="contact-form">
-                    <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_subject" value="Nueva solicitud: San Froilán 1">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-
-                    <div class="grid-2" style="gap: 20px;">
-                        <div class="form-group">
-                            <label data-lang="es">Nombre</label>
-                            <label data-lang="en">Name</label>
-                            <input type="text" name="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label data-lang="es">Teléfono</label>
-                            <label data-lang="en">Phone</label>
-                            <input type="tel" name="phone" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label data-lang="es">Email</label>
-                        <label data-lang="en">Email</label>
-                        <input type="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label data-lang="es">Disponibilidad preferida para visita</label>
-                        <label data-lang="en">Preferred time for viewing</label>
-                        <input type="text" name="availability" class="form-control"
-                            placeholder="Ej: Tardes, fines de semana...">
-                    </div>
-
-                    <div class="form-group" style="margin-top: 24px;">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="is_agency"
-                                style="width: 18px; height: 18px; accent-color: var(--primary);">
-                            <span data-lang="es">Soy una inmobiliaria.</span>
-                            <span data-lang="en">I am a real estate agency.</span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary"
-                        style="width: 100%; margin-top: 16px; font-size: 1.125rem;">
-                        <span data-lang="es">Enviar solicitud</span>
-                        <span data-lang="en">Send request</span>
-                    </button>
-                </form>
-
-                <div id="form-success" class="form-feedback"
-                    style="display: none; text-align: center; padding: 40px 20px;">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">✅</div>
-                    <h3 data-lang="es"
-                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">¡Solicitud
-                        enviada!</h3>
-                    <h3 data-lang="en"
-                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">Request
-                        sent!</h3>
-                    <p data-lang="es" style="color: var(--text-muted); font-size: 1.1rem;">Gracias por tu interés. Nos
-                        pondremos en contacto contigo lo antes posible.</p>
-                    <p data-lang="en" style="color: var(--text-muted); font-size: 1.1rem;">Thank you for your interest.
-                        We will get in touch with you as soon as possible.</p>
-                </div>
-
-                <div id="form-error" class="form-feedback"
-                    style="display: none; text-align: center; padding: 40px 20px;">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">❌</div>
-                    <h3 data-lang="es"
-                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">Algo ha
-                        salido mal</h3>
-                    <h3 data-lang="en"
-                        style="margin-bottom: 12px; font-family: 'Playfair Display', serif; font-size: 2rem;">Something
-                        went wrong</h3>
-                    <p data-lang="es" style="color: var(--text-muted); font-size: 1.1rem;">No hemos podido enviar tu
-                        solicitud. Por favor, inténtalo de nuevo o contacta por WhatsApp.</p>
-                    <p data-lang="en" style="color: var(--text-muted); font-size: 1.1rem;">We couldn't send your
-                        request. Please try again or contact via WhatsApp.</p>
-                    <button onclick="resetForm()" class="btn btn-outline"
-                        style="margin-top: 20px; color: var(--primary); border-color: var(--primary);">
-                        <span data-lang="es">Reintentar</span>
-                        <span data-lang="en">Retry</span>
-                    </button>
+                <div class="jotform-container">
+                    <script type="text/javascript" src="https://form.jotform.com/jsform/260561809128055"></script>
                 </div>
             </div>
         </div>
