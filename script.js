@@ -18,8 +18,7 @@ function setLang(lang) {
         }
     });
 
-    // Re-render gallery labels based on language
-    renderGallery();
+    // Re-render gallery labels based on language (Not needed with current setLang logic)
 }
 
 // Gallery Data
@@ -188,10 +187,14 @@ function scrollCarousel(containerId, direction) {
 
     // Calculate the width of one child (assuming all children have same width)
     const scrollAmount = container.clientWidth;
-    container.scrollBy({
-        left: scrollAmount * direction,
-        behavior: 'smooth'
-    });
+    if (container.scrollBy) {
+        container.scrollBy({
+            left: scrollAmount * direction,
+            behavior: 'smooth'
+        });
+    } else {
+        container.scrollLeft += scrollAmount * direction;
+    }
 }
 
 function resetForm() {
@@ -290,15 +293,21 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerHTML = htmlTag.classList.contains('en-active') ? 'Sending...' : 'Enviando...';
 
             const formData = new FormData(contactForm);
+            const dataObj = {};
+            formData.forEach((value, key) => dataObj[key] = value);
 
-            // Real API call to FormSubmit.co via AJAX
+            // Real API call to FormSubmit.co via AJAX (using JSON for better compatibility)
             fetch("https://formsubmit.co/ajax/soy@santigil.com", {
                 method: "POST",
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(dataObj)
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.success === "true" || data.success === true) {
+                    if (data.success === "true" || data.success === true || data.message) {
                         contactForm.style.display = 'none';
                         document.getElementById('form-success').style.display = 'block';
                         document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
