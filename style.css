@@ -530,6 +530,8 @@ ul {
   width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  background: #000;
+  /* Protect against containment gaps */
 }
 
 /* Specific height/aspect-ratio for different sections */
@@ -543,7 +545,8 @@ ul {
 }
 
 .project-carousel {
-  display: flex;
+  display: flex !important;
+  flex-wrap: nowrap !important;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   width: 100%;
@@ -560,9 +563,13 @@ ul {
   min-width: 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  /* Scaled, not cropped */
+  flex-shrink: 0;
+  /* Prevent stacking */
   scroll-snap-align: center;
   transition: opacity 0.3s ease;
+  background: #000;
 }
 
 /* SVG Map Interaction Styles matching reference */
