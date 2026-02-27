@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - San Froilán 1</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-nav {
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .gallery-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        #gallery-carousel {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .carousel-view {
+            position: relative;
+            aspect-ratio: 4/3;
+            max-height: 70vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-view img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel-info {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .room-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .room-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .room-desc {
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .nav-btn:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-btn {
+            left: 20px;
+        }
+
+        .next-btn {
+            right: 20px;
+        }
+
+        .counter {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .room-title {
+                font-size: 1.5rem;
+            }
+
+            .nav-btn {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="gallery-nav">
+        <a href="index.html" class="btn btn-outline" style="padding: 8px 16px;">
+            ← <span data-lang="es">Volver</span><span data-lang="en">Back</span>
+        </a>
+        <div style="font-weight: 700; font-family: 'Playfair Display', serif;">San Froilán 1</div>
+        <div style="width: 80px;"></div> <!-- Spacer -->
+    </nav>
+
+    <main class="gallery-container">
+        <div id="gallery-carousel">
+            <div class="carousel-view">
+                <button class="nav-btn prev-btn" onclick="changeImage(-1)">❮</button>
+                <img id="main-img" src="" alt="Gallery Image">
+                <button class="nav-btn next-btn" onclick="changeImage(1)">❯</button>
+                <div class="counter" id="img-counter">1 / 10</div>
+            </div>
+            <div class="carousel-info">
+                <div class="room-tag" id="room-tag">Salón</div>
+                <h1 class="room-title" id="room-title">Salón Principal</h1>
+                <p class="room-desc" id="room-desc">Descripción de la habitación.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery page specific logic
+        let galleryIndex = 0;
+        const mainImg = document.getElementById('main-img');
+        const counter = document.getElementById('img-counter');
+        const roomTag = document.getElementById('room-tag');
+        const roomTitle = document.getElementById('room-title');
+        const roomDesc = document.getElementById('room-desc');
+
+        // Descriptions object (reused/expanded from script.js logic)
+        const roomInfo = {
+            'living': { es: 'Salón', en: 'Living Room', descEs: 'Salón principal amplio y luminoso con vistas directas al parque.', descEn: 'Spacious and bright main living room with direct views of the park.' },
+            'kitchen': { es: 'Cocina', en: 'Kitchen', descEs: 'Cocina moderna totalmente equipada con acabados de alta calidad.', descEn: 'Modern fully equipped kitchen with high-quality finishes.' },
+            'bed1': { es: 'Dormitorio Principal', en: 'Master Bedroom', descEs: 'Suite principal con gran ventanal y mucha luz natural.', descEn: 'Master suite with a large window and plenty of natural light.' },
+            'vestidor': { es: 'Vestidor', en: 'Walk-in Closet', descEs: 'Amplio vestidor integrado en la suite principal.', descEn: 'Large walk-in closet integrated into the master suite.' },
+            'bed2': { es: 'Dormitorio 2', en: 'Bedroom 2', descEs: 'Segundo dormitorio ideal para invitados o niños.', descEn: 'Second bedroom, ideal for guests or children.' },
+            'bed3': { es: 'Dormitorio 3', en: 'Bedroom 3', descEs: 'Tercer dormitorio versátil, puede usarse como despacho.', descEn: 'Versatile third bedroom, can be used as an office.' },
+            'bath1': { es: 'Baño 1', en: 'Bathroom 1', descEs: 'Baño completo con acabados modernos.', descEn: 'Full bathroom with modern finishes.' },
+            'bath2': { es: 'Baño Principal', en: 'Main Bathroom', descEs: 'Baño principal en suite, elegante y funcional.', descEn: 'Main en-suite bathroom, elegant and functional.' },
+            'hall': { es: 'Pasillo', en: 'Hallway', descEs: 'Distribuidor amplio con focos empotrados.', descEn: 'Spacious hallway with recessed spotlights.' },
+            'terrace': { es: 'Terraza', en: 'Terrace', descEs: 'Pequeña terraza ideal para disfrutar del aire libre.', descEn: 'Small terrace ideal for enjoying the outdoors.' },
+            'garage': { es: 'Garaje', en: 'Garage', descEs: 'Plaza de garaje cómoda y de fácil acceso.', descEn: 'Comfortable and easy-access parking space.' },
+            'storage': { es: 'Trastero', en: 'Storage', descEs: 'Espacio de almacenamiento adicional de 4m².', descEn: 'Additional 4sqm storage space.' }
+        };
+
+        function updateGallery() {
+            const item = galleryData[galleryIndex];
+            const isEn = document.documentElement.classList.contains('en-active');
+
+            // Get room type from ID (e.g., 'living1' -> 'living')
+            const roomType = Object.keys(roomInfo).find(key => item.id.startsWith(key));
+            const info = roomInfo[roomType] || { es: item.es, en: item.en, descEs: '', descEn: '' };
+
+            mainImg.style.opacity = 0;
+            setTimeout(() => {
+                mainImg.src = item.real;
+                counter.innerText = `${galleryIndex + 1} / ${galleryData.length}`;
+                roomTag.innerText = isEn ? info.en : info.es;
+                roomTitle.innerText = isEn ? info.en : info.es;
+                roomDesc.innerText = isEn ? info.descEn : info.descEs;
+                mainImg.style.opacity = 1;
+            }, 300);
+        }
+
+        function changeImage(step) {
+            galleryIndex = (galleryIndex + step + galleryData.length) % galleryData.length;
+            updateGallery();
+        }
+
+        // Initialize
+        window.onload = () => {
+            // Check language from localStorage or parent
+            if (localStorage.getItem('lang') === 'en') {
+                document.documentElement.classList.add('en-active');
+            }
+            updateGallery();
+        };
+    </script>
+</body>
+
+</html>

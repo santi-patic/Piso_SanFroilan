@@ -52,17 +52,22 @@ let currentImages = [];
 let currentIndex = 0;
 
 function showRoomImages(roomId) {
+    if (!roomId) roomId = 'living';
     currentRoomId = roomId;
 
     // In our new setup, we map roomId to the prefix of id in galleryData (e.g. 'living', 'kitchen', 'bath1')
-    currentImages = galleryData.filter(item => item.id.startsWith(roomId));
+    if (roomId === 'garage_storage') {
+        currentImages = galleryData.filter(item => item.id.startsWith('garage') || item.id.startsWith('storage'));
+    } else {
+        currentImages = galleryData.filter(item => item.id.startsWith(roomId));
+    }
 
     if (currentImages.length === 0) return;
 
     currentIndex = 0;
 
     // Update active state on SVG polygons
-    document.querySelectorAll('.floor-area').forEach(area => {
+    document.querySelectorAll('.floor-area, .floor-button').forEach(area => {
         area.classList.remove('active');
         if (area.getAttribute('data-room') === roomId) {
             area.classList.add('active');
@@ -98,28 +103,24 @@ function showRoomImages(roomId) {
             en: 'Third bedroom featuring a built-in wardrobe.'
         },
         'bath1': {
-            es: 'Baño completo secundario con plato de ducha.',
-            en: 'Secondary full bathroom with walk-in shower.'
+            es: 'Baño completo con acabados modernos.',
+            en: 'Full bathroom with modern finishes.'
         },
         'bath2': {
-            es: 'Baño principal en suite con bañera.',
-            en: 'En-suite main bathroom featuring a bathtub.'
+            es: 'Baño principal en suite, elegante y funcional.',
+            en: 'Main en-suite bathroom, elegant and functional.'
         },
         'hall': {
-            es: 'Zona de paso y vestíbulo con distribución eficiente.',
-            en: 'Efficiently distributed hallway and entrance area.'
+            es: 'Pasillo distribuidor amplio con focos empotrados.',
+            en: 'Spacious hallway with recessed spotlights.'
         },
         'terrace': {
-            es: 'Vistas desde el balcón de la vivienda.',
-            en: 'Views from the property balcony.'
+            es: 'Pequeña terraza ideal para disfrutar del aire libre.',
+            en: 'Small terrace ideal for enjoying the outdoors.'
         },
-        'garage': {
-            es: 'Plaza de garaje amplia y de fácil acceso.',
-            en: 'Spacious and easily accessible garage space.'
-        },
-        'storage': {
-            es: 'Bodega de 4 m² para almacenamiento adicional.',
-            en: '4 sqm storage room for additional storage.'
+        'garage_storage': {
+            es: 'Plaza de garaje cómoda y trastero adicional de 4m² incluidos.',
+            en: 'Comfortable parking space and additional 4sqm storage room included.'
         }
     };
 

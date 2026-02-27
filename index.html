@@ -22,8 +22,8 @@
         <div class="container">
             <div class="logo">San Froilán 1 · Park View Apartment</div>
             <div class="nav-links">
-                <a href="#fotos" data-lang="es">Fotos</a>
-                <a href="#fotos" data-lang="en">Photos</a>
+                <a href="galeria.html" data-lang="es">Fotos</a>
+                <a href="galeria.html" data-lang="en">Photos</a>
                 <a href="#plano" data-lang="es">Plano</a>
                 <a href="#plano" data-lang="en">Floor Plan</a>
                 <a href="#ubicacion" data-lang="es">Ubicación</a>
@@ -65,7 +65,7 @@
                     <span data-lang="es">Pedir visita por WhatsApp</span>
                     <span data-lang="en">Book viewing via WhatsApp</span>
                 </a>
-                <a href="#fotos" class="btn btn-outline">
+                <a href="galeria.html" class="btn btn-outline">
                     <span data-lang="es">Ver fotos</span>
                     <span data-lang="en">View photos</span>
                 </a>
@@ -161,7 +161,7 @@
         </div>
     </section>
 
-    <!-- C) GALLERY (Removed, merged with interactive floor plan below) -->
+
 
     <!-- D) FLOOR PLAN -->
     <section id="plano" class="section section-bg-light" style="padding-top: 60px;">
@@ -190,12 +190,20 @@
                 <div class="carousel-side-panel"
                     style="background: var(--bg-white); padding: 32px; border-radius: 12px; display: flex; flex-direction: column; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
 
-                    <div style="margin-bottom: 20px;">
-                        <h3 id="carousel-title"
-                            style="font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--text-main); margin: 0 0 8px 0; font-weight: 600;">
-                            Salón</h3>
-                        <p id="carousel-desc" style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Vista
-                            frontal del salón, espacioso y con mucha luz.</p>
+                    <div
+                        style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h3 id="carousel-title"
+                                style="font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--text-main); margin: 0 0 8px 0; font-weight: 600;">
+                                Salón</h3>
+                            <p id="carousel-desc" style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Vista
+                                frontal del salón, espacioso y con mucha luz.</p>
+                        </div>
+                        <a href="galeria.html" class="btn btn-outline"
+                            style="padding: 6px 12px; font-size: 0.8rem; white-space: nowrap;">
+                            <span data-lang="es">Ver Galería Completa</span>
+                            <span data-lang="en">View Full Gallery</span>
+                        </a>
                     </div>
 
                     <!-- Carousel Container -->
@@ -263,13 +271,9 @@
                         <!-- Extra buttons for Garage and Storage as per reference image -->
                         <div class="floorplan-extra-links"
                             style="position: absolute; right: 20px; bottom: 20px; z-index: 15; display: flex; flex-direction: column; gap: 10px;">
-                            <button class="floor-button" data-room="garage">
-                                <span data-lang="es">VER GARAJE</span>
-                                <span data-lang="en">SEE GARAGE</span>
-                            </button>
-                            <button class="floor-button" data-room="storage">
-                                <span data-lang="es">VER TRASTERO</span>
-                                <span data-lang="en">SEE STORAGE</span>
+                            <button class="floor-button" data-room="garage_storage">
+                                <span data-lang="es">VER GARAJE Y BODEGA</span>
+                                <span data-lang="en">SEE GARAGE & STORAGE</span>
                             </button>
                         </div>
                     </div>
@@ -495,17 +499,13 @@
                     style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 
                     <!-- CSS Scroll Snap Carousel -->
-                    <div style="position: relative; width: 100%; height: 220px;">
-                        <div class="project-carousel" id="carousel-park"
-                            style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
-                            <img src="https://i.postimg.cc/4NkWMwRz/parquecanedo1.jpg"
-                                alt="Parque Canedo con piso señalado"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                    <div class="project-carousel-wrapper carousel-project-wrapper">
+                        <div class="project-carousel" id="carousel-park">
                             <img src="https://estaticos-cdn.prensaiberica.es/clip/aeb6fe5d-fe98-40be-9919-a77d01a1873a_alta-libre-aspect-ratio_default_0.jpg"
-                                alt="Render Parque Canedo desde edificio"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center; object-position: center bottom;">
-                            <img src="https://i.postimg.cc/7Y8KcXr3/parquecanedo2.jpg" alt="Parque Canedo entorno"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                                alt="Render Parque Canedo desde edificio" style="object-position: center bottom;">
+                            <img src="https://i.postimg.cc/4NkWMwRz/parquecanedo1.jpg"
+                                alt="Parque Canedo con piso señalado">
+                            <img src="https://i.postimg.cc/7Y8KcXr3/parquecanedo2.jpg" alt="Parque Canedo entorno">
                         </div>
                         <!-- Navigation Arrows -->
                         <button onclick="scrollCarousel('carousel-park', -1)" class="carousel-arrow left-arrow"
@@ -539,15 +539,12 @@
                     style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 
                     <!-- CSS Scroll Snap Carousel -->
-                    <div style="position: relative; width: 100%; height: 220px;">
-                        <div class="project-carousel" id="carousel-station"
-                            style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
+                    <div class="project-carousel-wrapper carousel-project-wrapper">
+                        <div class="project-carousel" id="carousel-station">
                             <img src="https://i.postimg.cc/ZYyfV22y/estacion-barrio1.jpg"
-                                alt="Obras Estación intermodal 1"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                                alt="Obras Estación intermodal 1">
                             <img src="https://i.postimg.cc/7PTBmdd2/estacion-barrio2.jpg"
-                                alt="Obras Estación intermodal 2"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                                alt="Obras Estación intermodal 2">
                         </div>
                         <!-- Navigation Arrows -->
                         <button onclick="scrollCarousel('carousel-station', -1)" class="carousel-arrow left-arrow"
@@ -603,16 +600,11 @@
                         <span data-lang="en">Current view (construction ongoing)</span>
                     </h3>
 
-                    <div
-                        style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 16px; aspect-ratio: 16 / 9; max-height: 450px;">
-                        <div class="project-carousel" id="carousel-actual"
-                            style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none;">
-                            <img src="https://i.postimg.cc/WzrXzqgq/actual1.jpg" alt="Obra vista 1"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
-                            <img src="https://i.postimg.cc/VvMDv0nC/actual2.jpg" alt="Obra vista 2"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
-                            <img src="https://i.postimg.cc/PJZ2JvYZ/actual3.jpg" alt="Obra vista 3"
-                                style="min-width: 100%; height: 100%; object-fit: cover; scroll-snap-align: center;">
+                    <div class="project-carousel-wrapper carousel-actual-wrapper">
+                        <div class="project-carousel" id="carousel-actual">
+                            <img src="https://i.postimg.cc/WzrXzqgq/actual1.jpg" alt="Obra vista 1">
+                            <img src="https://i.postimg.cc/VvMDv0nC/actual2.jpg" alt="Obra vista 2">
+                            <img src="https://i.postimg.cc/PJZ2JvYZ/actual3.jpg" alt="Obra vista 3">
                         </div>
                         <!-- Navigation Arrows -->
                         <button onclick="scrollCarousel('carousel-actual', -1)" class="carousel-arrow left-arrow"

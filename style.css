@@ -524,6 +524,47 @@ ul {
   right: 8px;
 }
 
+/* Project Carousels Responsiveness */
+.project-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* Specific height/aspect-ratio for different sections */
+.carousel-actual-wrapper {
+  aspect-ratio: 16 / 9;
+  max-height: 450px;
+}
+
+.carousel-project-wrapper {
+  height: 220px;
+}
+
+.project-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.project-carousel img {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+  transition: opacity 0.3s ease;
+}
+
 /* SVG Map Interaction Styles matching reference */
 .floor-area {
   cursor: pointer;
