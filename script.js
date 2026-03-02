@@ -1,3 +1,57 @@
+// --- SISTEMA DE PERSONALIZACIÓN INTEGRAL ---
+
+const CONFIG_INMOBILIARIAS = {
+    "default": {
+        precio: "239.000€",
+        telefono: "34661215327",
+        email: "soy@santigil.com",
+        asuntoMail: "Interés en el piso de San Froilán",
+        mensajeWa: "Hola, he visto la web de San Froilán y me gustaría pedir una visita."
+    },
+    "tecnocasa": {
+        precio: "245.000€",
+        telefono: "34600111222",
+        email: "ponte@tecnocasa.es",
+        asuntoMail: "Contacto desde Web - Piso San Froilán",
+        mensajeWa: "Hola, estoy interesado en el piso de San Froilán gestionado por Tecnocasa."
+    },
+    "vivienda2": {
+        precio: "242.000€",
+        telefono: "34699888777",
+        email: "info@vivienda2.com",
+        asuntoMail: "Información Vivienda San Froilán",
+        mensajeWa: "Hola, contacto desde la web por el piso de San Froilán."
+    }
+};
+
+function aplicarPersonalizacion() {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    const data = CONFIG_INMOBILIARIAS[ref] || CONFIG_INMOBILIARIAS["default"];
+
+    // 1. Cambiar Precio
+    const elPrecio = document.getElementById('precio-total');
+    if (elPrecio) elPrecio.innerText = data.precio;
+
+    // 2. Cambiar WhatsApps
+    const urlWa = `https://wa.me/${data.telefono}?text=${encodeURIComponent(data.mensajeWa)}`;
+    ['wa-flotante', 'wa-contacto'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.href = urlWa;
+    });
+
+    // 3. Cambiar Email (Mailto)
+    const btnEmail = document.getElementById('email-contacto');
+    if (btnEmail) {
+        btnEmail.href = `mailto:${data.email}?subject=${encodeURIComponent(data.asuntoMail)}`;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    aplicarPersonalizacion();
+    // Tu código original sigue aquí...
+});
+
 // Interactive logic for San Froilán 1 Microsite
 
 // Language Toggle

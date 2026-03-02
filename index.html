@@ -86,8 +86,8 @@
     </nav>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/34661215327" class="floating-whatsapp" target="_blank">
-        <span style="font-size: 1.2rem;">💬</span>
+    <a href="https://wa.me/34661215327" id="wa-flotante" class="floating-whatsapp" target="_blank"> <span
+            style="font-size: 1.2rem;">💬</span>
         <span data-lang="es">WhatsApp · Pedir visita</span>
         <span data-lang="en">WhatsApp · Book a viewing</span>
     </a>
@@ -745,37 +745,14 @@
 
             <div class="price-card"
                 style="background: var(--bg-white); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); text-align: center;">
-                <div class="price-items" style="margin-bottom: 30px; display: flex; flex-direction: column; gap: 15px;">
-                    <div
-                        style="display: flex; justify-content: space-between; font-size: 1.1rem; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px;">
-                        <span data-lang="es">Vivienda</span>
-                        <span data-lang="en">Apartment</span>
-                        <span style="font-weight: 600;">207.000€</span>
-                    </div>
-                    <div
-                        style="display: flex; justify-content: space-between; font-size: 1.1rem; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px;">
-                        <span data-lang="es">Garaje</span>
-                        <span data-lang="en">Garage</span>
-                        <span style="font-weight: 600;">23.000€</span>
-                    </div>
-                    <div
-                        style="display: flex; justify-content: space-between; font-size: 1.1rem; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px;">
-                        <span data-lang="es">Trastero</span>
-                        <span data-lang="en">Storage</span>
-                        <span style="font-weight: 600;">9.000€</span>
-                    </div>
-                </div>
 
                 <div class="price-total"
                     style="background: var(--bg-light); padding: 25px; border-radius: 12px; border: 2px solid var(--primary);">
                     <div
                         style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 5px;">
                         Total</div>
-                    <div style="font-size: 2.5rem; font-weight: 800; color: var(--text-main); line-height: 1;">239.000€
-                    </div>
-                    <div style="margin-top: 10px; font-weight: 600; color: var(--primary); font-size: 0.9rem;">
-                        <span data-lang="es">(Indivisible)</span>
-                        <span data-lang="en">(Indivisible)</span>
+                    <div id="precio-total"
+                        style="font-size: 2.5rem; font-weight: 800; color: var(--text-main); line-height: 1;">239.000€
                     </div>
                 </div>
             </div>
@@ -790,11 +767,11 @@
                 <h2 class="section-title" style="margin-bottom: 32px;" data-lang="en">Schedule your visit</h2>
 
                 <div style="display: flex; gap: 16px; margin-bottom: 40px; justify-content: center;">
-                    <a href="https://wa.me/34000000000" class="btn btn-primary" style="width: 100%; max-width: 250px;"
-                        target="_blank">
+                    <a href="https://wa.me/34000000000" id="wa-contacto" class="btn btn-primary"
+                        style="width: 100%; max-width: 250px;" target="_blank">
                         💬 WhatsApp
                     </a>
-                    <a href="mailto:soy@santigil.com" class="btn btn-outline"
+                    <a href="mailto:soy@santigil.com" id="email-contacto" class="btn btn-outline"
                         style="border-color: var(--primary); color: var(--primary); width: 100%; max-width: 250px;">
                         ✉️ Email
                     </a>
@@ -802,14 +779,6 @@
 
                 <hr style="border: none; border-top: 1px solid var(--border-light); margin-bottom: 32px;">
 
-                <h3 style="margin-bottom: 24px; text-align: center; font-weight: 600;">
-                    <span data-lang="es">O rellena este breve formulario:</span>
-                    <span data-lang="en">Or fill out this short form:</span>
-                </h3>
-
-                <div class="jotform-container">
-                    <script type="text/javascript" src="https://form.jotform.com/jsform/260561809128055"></script>
-                </div>
             </div>
         </div>
     </section>
