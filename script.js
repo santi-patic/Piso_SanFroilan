@@ -95,12 +95,12 @@ function showRoomImages(roomId) {
             en: 'Independent walk-in closet connected to the master bedroom.'
         },
         'bed2': {
-            es: 'Segundo dormitorio doble con armario empotrado, perfecto para invitados o despacho.',
-            en: 'Second double bedroom with built-in wardrobe, perfect for guests or home office.'
+            es: 'Segundo dormitorio doble con armario empotrado, perfecto para niños.',
+            en: 'Second double bedroom with built-in wardrobe, perfect for children.'
         },
         'bed3': {
-            es: 'Tercer dormitorio con armario empotrado.',
-            en: 'Third bedroom featuring a built-in wardrobe.'
+            es: 'Tercer dormitorio con armario empotrado. Ideal para niños, invitados o despacho.',
+            en: 'Third bedroom featuring a built-in wardrobe. Ideal for children, guests or home office.'
         },
         'bath1': {
             es: 'Baño completo con acabados modernos.',
