@@ -44,7 +44,7 @@ function aplicarPersonalizacion() {
     const elPrecioSeccion = document.getElementById('precio');
     const elPrecioMonto = document.getElementById('precio-total');
 
-    // Resetear visibilidad por si acaso
+    // Resetear visibilidad por si acaso -----
     if (elPrecioSeccion) {
         elPrecioSeccion.style.display = '';
         elPrecioSeccion.removeAttribute('hidden');
