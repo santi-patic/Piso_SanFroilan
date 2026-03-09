@@ -22,6 +22,10 @@
   --transition: all 0.3s ease;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

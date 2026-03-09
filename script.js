@@ -25,7 +25,7 @@ const CONFIG_INMOBILIARIAS = {
     "solaina": {
         precio: "",
         sinPrecio: true,
-        telefono: "34661215327",
+        telefono: "34676222462",
         email: "soy@santigil.com",
         asuntoMail: "Interés en el piso de San Froilán (Ref: Solaina)",
         mensajeWa: "Hola Solaina, he visto la web de San Froilán y me gustaría pedir una visita."
@@ -42,16 +42,25 @@ function aplicarPersonalizacion() {
     const elPrecioMonto = document.getElementById('precio-total');
 
     if (data.sinPrecio) {
-        if (elPrecioSeccion) elPrecioSeccion.style.display = 'none';
+        if (elPrecioSeccion) {
+            elPrecioSeccion.style.display = 'none';
+            elPrecioSeccion.setAttribute('hidden', 'true');
+        }
         // Ocultar enlaces de navegación al precio
         ['nav-precio-es', 'nav-precio-en'].forEach(id => {
             const el = document.getElementById(id);
-            if (el) el.style.display = 'none';
+            if (el) {
+                el.style.display = 'none';
+                el.setAttribute('hidden', 'true');
+            }
         });
         // Ocultar menciones al precio en los avisos
         ['notice-status-es', 'notice-status-en', 'price-notice-status-es', 'price-notice-status-en'].forEach(id => {
             const el = document.getElementById(id);
-            if (el) el.style.display = 'none';
+            if (el) {
+                el.style.display = 'none';
+                el.setAttribute('hidden', 'true');
+            }
         });
     } else {
         if (elPrecioMonto) elPrecioMonto.innerText = data.precio;
