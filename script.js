@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Tu código original sigue aquí...
 });
 
-// Interactive logic for San Froilán 1 Microsite
+// Interactive logic for San Froilán 1 Microsite_
 
 // Language Toggle
 const htmlTag = document.documentElement;
