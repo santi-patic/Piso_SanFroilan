@@ -23,8 +23,8 @@ const CONFIG_INMOBILIARIAS = {
         mensajeWa: "Hola, contacto desde la web por el piso de San Froilán."
     },
     "solaina": {
-        precio: "",
-        sinPrecio: true,
+        precio: "CONSULTAR",
+        ocultarAvisos: true,
         telefono: "34676222462",
         email: "soy@santigil.com",
         asuntoMail: "Interés en el piso de San Froilán (Ref: Solaina)",
@@ -40,9 +40,15 @@ function aplicarPersonalizacion() {
 
     console.log("Aplicando personalización. Ref detectada:", ref, "Config:", data);
 
-    // 1. Cambiar Precio / Ocultar si es Solaina
+    // 1. Cambiar Precio / Ocultar si es Solaina (pero ahora pide CONSULTAR)
     const elPrecioSeccion = document.getElementById('precio');
     const elPrecioMonto = document.getElementById('precio-total');
+
+    // Resetear visibilidad por si acaso
+    if (elPrecioSeccion) {
+        elPrecioSeccion.style.display = '';
+        elPrecioSeccion.removeAttribute('hidden');
+    }
 
     if (data.sinPrecio) {
         if (elPrecioSeccion) {
@@ -57,7 +63,20 @@ function aplicarPersonalizacion() {
                 el.setAttribute('hidden', 'true');
             }
         });
-        // Ocultar menciones al precio en los avisos
+    } else {
+        if (elPrecioMonto) elPrecioMonto.innerText = data.precio;
+        // Si no es "sinPrecio", nos aseguramos de que el nav se vea (si no es solaina con avisos ocultos)
+        ['nav-precio-es', 'nav-precio-en'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.style.display = '';
+                el.removeAttribute('hidden');
+            }
+        });
+    }
+
+    // Ocultar menciones al precio en los avisos si la bandera está activa (importante para Solaina)
+    if (data.ocultarAvisos || data.sinPrecio) {
         ['notice-status-es', 'notice-status-en', 'price-notice-status-es', 'price-notice-status-en'].forEach(id => {
             const el = document.getElementById(id);
             if (el) {
@@ -65,8 +84,6 @@ function aplicarPersonalizacion() {
                 el.setAttribute('hidden', 'true');
             }
         });
-    } else {
-        if (elPrecioMonto) elPrecioMonto.innerText = data.precio;
     }
 
     // 2. Cambiar WhatsApps
