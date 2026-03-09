@@ -34,8 +34,11 @@ const CONFIG_INMOBILIARIAS = {
 
 function aplicarPersonalizacion() {
     const params = new URLSearchParams(window.location.search);
-    const ref = params.get('ref');
+    const refParam = params.get('ref') || params.get('REF');
+    const ref = refParam ? refParam.toLowerCase() : null;
     const data = CONFIG_INMOBILIARIAS[ref] || CONFIG_INMOBILIARIAS["default"];
+
+    console.log("Aplicando personalización. Ref detectada:", ref, "Config:", data);
 
     // 1. Cambiar Precio / Ocultar si es Solaina
     const elPrecioSeccion = document.getElementById('precio');
