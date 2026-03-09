@@ -21,6 +21,14 @@ const CONFIG_INMOBILIARIAS = {
         email: "info@vivienda2.com",
         asuntoMail: "Información Vivienda San Froilán",
         mensajeWa: "Hola, contacto desde la web por el piso de San Froilán."
+    },
+    "solaina": {
+        precio: "",
+        sinPrecio: true,
+        telefono: "34661215327",
+        email: "soy@santigil.com",
+        asuntoMail: "Interés en el piso de San Froilán (Ref: Solaina)",
+        mensajeWa: "Hola Solaina, he visto la web de San Froilán y me gustaría pedir una visita."
     }
 };
 
@@ -29,9 +37,25 @@ function aplicarPersonalizacion() {
     const ref = params.get('ref');
     const data = CONFIG_INMOBILIARIAS[ref] || CONFIG_INMOBILIARIAS["default"];
 
-    // 1. Cambiar Precio
-    const elPrecio = document.getElementById('precio-total');
-    if (elPrecio) elPrecio.innerText = data.precio;
+    // 1. Cambiar Precio / Ocultar si es Solaina
+    const elPrecioSeccion = document.getElementById('precio');
+    const elPrecioMonto = document.getElementById('precio-total');
+
+    if (data.sinPrecio) {
+        if (elPrecioSeccion) elPrecioSeccion.style.display = 'none';
+        // Ocultar enlaces de navegación al precio
+        ['nav-precio-es', 'nav-precio-en'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.style.display = 'none';
+        });
+        // Ocultar menciones al precio en los avisos
+        ['notice-status-es', 'notice-status-en', 'price-notice-status-es', 'price-notice-status-en'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.style.display = 'none';
+        });
+    } else {
+        if (elPrecioMonto) elPrecioMonto.innerText = data.precio;
+    }
 
     // 2. Cambiar WhatsApps
     const urlWa = `https://wa.me/${data.telefono}?text=${encodeURIComponent(data.mensajeWa)}`;
