@@ -116,6 +116,9 @@ function setLang(lang) {
         htmlTag.classList.remove('en-active');
     }
 
+    // Persist language choice
+    localStorage.setItem('lang', lang);
+
     // Update button states
     document.querySelectorAll('.lang-btn').forEach(btn => {
         if (btn.innerText.toLowerCase() === lang) {
@@ -125,7 +128,10 @@ function setLang(lang) {
         }
     });
 
-    // Re-render gallery labels based on language (Not needed with current setLang logic)
+    // CRITICAL FIX: Re-trigger room image show to update JS-rendered labels (title/description)
+    if (typeof showRoomImages === 'function') {
+        showRoomImages(currentRoomId);
+    }
 }
 
 // Gallery Data
@@ -369,10 +375,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render for Living Room
     showRoomImages('living');
 
-    // Check local storage or browser pref for lang (optional)
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('en')) {
-        setLang('en');
+    // Check local storage or browser pref for lang
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang) {
+        setLang(savedLang);
+    } else {
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('en')) {
+            setLang('en');
+        }
     }
 });
 
