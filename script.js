@@ -8,20 +8,6 @@ const CONFIG_INMOBILIARIAS = {
         asuntoMail: "Interés en el piso de San Froilán",
         mensajeWa: "Hola, he visto la web de San Froilán y me gustaría pedir una visita."
     },
-    "tecnocasa": {
-        precio: "245.000€",
-        telefono: "34600111222",
-        email: "ponte@tecnocasa.es",
-        asuntoMail: "Contacto desde Web - Piso San Froilán",
-        mensajeWa: "Hola, estoy interesado en el piso de San Froilán gestionado por Tecnocasa."
-    },
-    "vivienda2": {
-        precio: "242.000€",
-        telefono: "34699888777",
-        email: "info@vivienda2.com",
-        asuntoMail: "Información Vivienda San Froilán",
-        mensajeWa: "Hola, contacto desde la web por el piso de San Froilán."
-    },
     "solaina": {
         precio: "CONSULTAR",
         ocultarAvisos: true,
