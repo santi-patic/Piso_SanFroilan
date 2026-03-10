@@ -82,6 +82,7 @@ function aplicarPersonalizacion() {
     // 3. Cambiar Email (Mailto)
     const btnEmail = document.getElementById('email-contacto');
     if (btnEmail) {
+        // Esto cambiará el destino del correo y el asunto según la referencia
         btnEmail.href = `mailto:${data.email}?subject=${encodeURIComponent(data.asuntoMail)}`;
     }
 }
