@@ -26,7 +26,7 @@ const CONFIG_INMOBILIARIAS = {
         precio: "CONSULTAR",
         ocultarAvisos: true,
         telefono: "34676222462",
-        email: "soy@santigil.com",
+        email: "info@solaina.com",
         asuntoMail: "Interés en el piso de San Froilán (Ref: Solaina)",
         mensajeWa: "Hola Solaina, he visto la web de San Froilán y me gustaría pedir una visita."
     }
