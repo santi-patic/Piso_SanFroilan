@@ -2,7 +2,7 @@
 
 const CONFIG_INMOBILIARIAS = {
     "default": {
-        precio: "239.000€",
+        precio: "Escuchando Ofertas",
         telefono: "34661215327",
         email: "soy@santigil.com",
         asuntoMail: "Interés en el piso de San Froilán",
